@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - signatures</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="row split h-100 align-items-center" style="display:flex">
+
+  <!-- First Half -->
+  <div class="col-md-6 h-100">
+    <div class="d-flex flex-column align-items-center h-100" style="flex:1;">
+      <div class="jumbotron text-center">
+        <pre><h2>UCLA Department of Physics and Astronomy</h2><h1>Email Signature Generator</h1></pre>
+      </div>
+      <div>
+
+        <div class="row form-group">
+          <label for="inputName" class="col-auto col-form-label">Name</label>
+          <div class="col-auto">
+            <input id="inputName" class="form-control" type="text" placeholder="Joe Bruin">
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="inputTitle" class="col-auto col-form-label">Title</label>
+          <div class="col-auto">
+            <input id="inputTitle" class="form-control" type="text" placeholder="Fictitious Bear">
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="inputPronouns" class="col-auto col-form-label">Pronouns</label>
+          <div class="col-auto">
+            <select id="inputPronouns" class="form-select">
+              <option selected>They/Them</option>
+              <option>She/Her</option>
+              <option>He/Him</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="writeinPronounsRow" class="toshow row form-group">
+          <label for="writeinPronouns" class="col-auto col-form-label">Write in your pronouns:</label>
+          <div class="col-auto">
+            <input id="writeinPronouns" class="form-control">
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="inputArea" class="col-auto col-form-label">Group or Area</label>
+          <div class="col-auto">
+            <input id="inputArea" class="form-control" type="text" placeholder="Experimental Metaphysics">
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <div class="col-auto col-form-label">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" checked id="urlCheck">
+              <label class="form-check-label" for="urlCheck">
+                Include Webpage Link? </label>
+            </div>
+          </div>
+          <div class="col-auto">
+            <input id="inputURL" name="inputURL" class="form-control" type="text" placeholder="https://www.pa.ucla.edu/"  />
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="inputAddress" class="col-auto col-form-label">Campus Address</label>
+          <div class="col-auto">
+            <textarea id="inputAddress" class="form-control" rows=3 placeholder="The PABio
+475 Portola Plaza
+Los Angeles, CA 90095"></textarea>
+          </div>
+        </div>
+
+                <div class="row form-group">
+          <div class="col-auto col-form-label">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" checked id="phoneCheck">
+              <label class="form-check-label" for="urlCheck">
+                Include Phone Number? </label>
+            </div>
+          </div>
+          <div class="col-auto">
+            <input id="inputPhone" name="inputPhone" class="form-control" type="text" placeholder="(123)456-7890"  />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Half -->
+  <div class="col-md-6 bg-blue h-100">
+    <div class="d-flex align-items-center bg-blue p-5 justify-content-center">
+      <div style="text-align:left">
+
+        <main id="signature">
+          <div id="line1" style="text-align:left; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1em; white-space: pre; margin-bottom: .75em;"><b><span id="name">Joe Bruin</span></b><span style="margin: 1em;">|</span><span id="title">Fictitious Bear</span><span style="margin: 1em;">|</span><span id="pronouns">They/Them</span></div>
+          <div id="blue" style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1em; white-space: pre; font-weight: bold; color: #3283bf;">UCLA DEPARTMENT OF PHYSICS & ASTRONOMY</div>
+          <div id="area" style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1em; white-space: pre; margin-bottom: .75em; color: #3283bf;"><a style="color: #3283bf;" href="https://www.pa.ucla.edu/" target="_blank" id="link">Experimental Metaphysics</a></div>
+          <div id="contact" style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1em; white-space: pre-wrap; font-size: 10pt; margin: 0;">The PABio<br>475 Portola Plaza<br>Los Angeles, CA 90095</div>
+          <div id="phone" style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1em; white-space: pre; font-size: 10pt; margin: 0;">(123) 456-7890</div>
+        </main>
+        <div class="d-md-flex-column">
+          <button class="btn btn-outline-primary" id="copybtn" onclick="CopyToClipboard('signature')">
+            Copy to Clipboard
+          </button>
+          <p><b>Note:</b> Copying the signature manually (e.g. using keyboard shortcuts) will not work in some browsers and email clients, use this fancy button instead.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
